@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRAFTED BY WAV</title>
+
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CUSTOM CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+        }
+
+        section,
+        header {
+            scroll-margin-top: 75px;
+        }
+
+        /* NAVBAR */
+
+        .navbar-brand {
+            letter-spacing: 1px;
+        }
+
+        /* HERO */
+
+        .hero-section {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-box {
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8c4fad, #6f42c1);
+            color: rgb(241, 234, 241);
+            border-radius: 25px;
+        }
+
+        /* CARDS */
+
+        .feature-card,
+        .pricing-card {
+            transition: 0.3s;
+        }
+
+        .feature-card:hover,
+        .pricing-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-icon {
+            font-size: 45px;
+            color: #ad5aa7;
+        }
+
+        /* TESTIMONIAL */
+
+        .testimonial-box {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        /* CONTACT */
+
+        .contact-icon {
+            font-size: 30px;
+            color: #b768cb;
+        }
+
+        /* DARK MODE */
+
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        body.dark-mode .bg-light {
+            background-color: #1e1e1e !important;
+        }
+
+        body.dark-mode .card {
+            background-color: #2b2b2b;
+            color: white;
+        }
+
+        body.dark-mode .text-muted {
+            color: #b0b0b0 !important;
+        }
+
+        body.dark-mode .form-control {
+            background-color: #353738;
+            color: white;
+            border-color: #6c757d;
+        }
+
+        body.dark-mode .form-control::placeholder {
+            color: #adb5bd;
+        }
+
+        /* FOOTER */
+
+        footer a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#home">
+                CRAFTED BY WAV
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">
+                            Features
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- DARK MODE BUTTON -->
+
+                <button
+                    id="themeToggle"
+                    class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0">
+
+                    <i class="bi bi-moon-fill"></i>
+                    Dark Mode
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO / HOME SECTION -->
+
+    <header id="home" class="hero-section bg-light py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+
+                <!-- LEFT COLUMN -->
+
+                <div class="col-sm-12 col-md-7 col-lg-6">
+
+                    <span class="badge bg-primary mb-3 p-2">
+
+                        <i class="bi bi-printer-fill"></i>
+                        Creative Printing Services
+
+                    </span>
+
+
+                    <h1 class="display-3 fw-bold mb-3">
+                        CRAFTED BY WAV
+                    </h1>
+
+
+                    <h2 class="h3 mb-3">
+                        Turning Your Ideas Into Something You Can Hold
+                    </h2>
+
+
+                    <p class="lead text-muted">
+
+                        Affordable, high-quality, and customized printing
+                        services for school projects, businesses, personalized
+                        gifts, and special occasions.
+
+                    </p>
+
+
+                    <a
+                        href="#pricing"
+                        class="btn btn-primary btn-lg me-2 mb-2">
+
+                        <i class="bi bi-bag"></i>
+                        View Packages
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline-primary btn-lg mb-2">
+
+                        <i class="bi bi-chat-dots"></i>
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+
+                <div class="col-sm-12 col-md-5 col-lg-6">
+
+                    <div class="hero-box text-center shadow p-5">
+
+                        <div>
+
+                            <i class="bi bi-printer display-1"></i>
+
+                            <h2 class="fw-bold mt-3">
+                                Print. Create. Personalize.
+                            </h2>
+
+                            <p class="fs-5 mb-0">
+
+                                Creative products made especially for you.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- FEATURES -->
+
+    <section id="features" class="py-5">
+
+        <div class="container">
+
+
+            <div class="text-center mb-5">
+
+                <span class="badge bg-primary mb-2">
+                    Features
+                </span>
+
+                <h2 class="fw-bold">
+                    Why Choose CRAFTED BY WAV?
+                </h2>
+
+                <p class="text-muted">
+
+                    We provide creative and reliable printing services
+                    designed to meet our customers' needs.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- FEATURE 1 -->
+
+                <div class="col-sm-12 col-md-4">
+
+                    <div class="card feature-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body text-center p-4">
+
+                            <i class="bi bi-wallet2 feature-icon"></i>
+
+                            <h4 class="fw-bold mt-3">
+                                Affordable Prices
+                            </h4>
+
+                            <p class="text-muted">
+
+                                We offer budget-friendly printing services
+                                without compromising the quality of our products.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURE 2 -->
+
+                <div class="col-sm-12 col-md-4">
+
+                    <div class="card feature-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body text-center p-4">
+
+                            <i class="bi bi-printer feature-icon"></i>
+
+                            <h4 class="fw-bold mt-3">
+                                Quality Printing
+                            </h4>
+
+                            <p class="text-muted">
+
+                                We make sure that every printed product is
+                                clear, vibrant, and carefully finished.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURE 3 -->
+
+                <div class="col-sm-12 col-md-4">
+
+                    <div class="card feature-card h-100 border-0 shadow-sm">
+
+                        <div class="card-body text-center p-4">
+
+                            <i class="bi bi-palette feature-icon"></i>
+
+                            <h4 class="fw-bold mt-3">
+                                Customized Designs
+                            </h4>
+
+                            <p class="text-muted">
+
+                                Customers can personalize their products
+                                according to their preferred design,
+                                style, theme, and occasion.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section id="pricing" class="bg-light py-5">
+
+        <div class="container">
+
+
+            <div class="text-center mb-5">
+
+                <span class="badge bg-primary mb-2">
+                    Pricing
+                </span>
+
+                <h2 class="fw-bold">
+                    Choose Your Package
+                </h2>
+
+                <p class="text-muted">
+
+                    Select the package that best fits your printing needs.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- STARTER -->
+
+                <div class="col-sm-12 col-md-4">
+
+                    <div class="card pricing-card h-100 shadow-sm">
+
+                        <div class="card-body p-4">
+
+                            <div class="text-center">
+
+                                <i class="bi bi-box feature-icon"></i>
+
+                                <h3 class="fw-bold mt-3">
+                                    Starter
+                                </h3>
+
+                                <h2 class="display-5 fw-bold text-primary">
+                                    ₱99
+                                </h2>
+
+                                <p class="text-muted">
+                                    Best for simple printing needs.
+                                </p>
+
+                            </div>
+
+                            <hr>
+
+                            <ul class="list-unstyled">
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Basic document printing
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Photocopying
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    ID picture printing
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Simple design
+                                </li>
+
+                            </ul>
+
+
+                            <button
+                                class="btn btn-outline-primary w-100 plan-button"
+                                data-plan="Starter">
+
+                                Choose Starter
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRO -->
+
+                <div class="col-sm-12 col-md-4">
+
+                    <div class="card pricing-card h-100 shadow border-primary">
+
+                        <div class="card-header text-center bg-primary text-white fw-bold">
+
+                            Most Popular
+
+                        </div>
+
+                        <div class="card-body p-4">
+
+                            <div class="text-center">
+
+                                <i class="bi bi-stars feature-icon"></i>
+
+                                <h3 class="fw-bold mt-3">
+                                    Pro
+                                </h3>
+
+                                <h2 class="display-5 fw-bold text-primary">
+                                    ₱299
+                                </h2>
+
+                                <p class="text-muted">
+
+                                    Best for personalized projects.
+
+                                </p>
+
+                            </div>
+
+                            <hr>
+
+                            <ul class="list-unstyled">
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Customized invitations
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Customized stickers
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Instax-inspired prints
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Personalized design
+                                </li>
+
+                            </ul>
+
+
+                            <button
+                                class="btn btn-primary w-100 plan-button"
+                                data-plan="Pro">
+
+                                Choose Pro
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ENTERPRISE -->
+
+                <div class="col-sm-12 col-md-4">
+
+                    <div class="card pricing-card h-100 shadow-sm">
+
+                        <div class="card-body p-4">
+
+                            <div class="text-center">
+
+                                <i class="bi bi-building feature-icon"></i>
+
+                                <h3 class="fw-bold mt-3">
+                                    Enterprise
+                                </h3>
+
+                                <h2 class="display-5 fw-bold text-primary">
+                                    ₱599
+                                </h2>
+
+                                <p class="text-muted">
+
+                                    Best for business and bulk orders.
+
+                                </p>
+
+                            </div>
+
+                            <hr>
+
+                            <ul class="list-unstyled">
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Bulk printing
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Personalized keychains
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Laminating services
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    Full customization
+                                </li>
+
+                            </ul>
+
+
+                            <button
+                                class="btn btn-outline-primary w-100 plan-button"
+                                data-plan="Enterprise">
+
+                                Choose Enterprise
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+
+    <section id="testimonials" class="py-5">
+
+        <div class="container">
+
+
+            <div class="text-center mb-4">
+
+                <span class="badge bg-primary mb-2">
+                    Testimonials
+                </span>
+
+                <h2 class="fw-bold">
+                    What Our Customers Say
+                </h2>
+
+                <p class="text-muted">
+
+                    See what our customers think about our products
+                    and services.
+
+                </p>
+
+            </div>
+
+
+            <div
+                id="testimonialCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel">
+
+
+                <div class="carousel-inner">
+
+
+                    <!-- CUSTOMER 1 -->
+
+                    <div class="carousel-item active">
+
+                        <div class="testimonial-box text-center p-5">
+
+                            <i class="bi bi-quote display-4 text-primary"></i>
+
+                            <p class="lead">
+
+                                "The prints were clear and the quality was
+                                really good. The price was also affordable.
+                                I will definitely order again!"
+
+                            </p>
+
+                            <div class="stars mb-2">
+                                ★★★★★
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Princes B.
+                            </h5>
+
+                            <small class="text-muted">
+                                Customer
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CUSTOMER 2 -->
+
+                    <div class="carousel-item">
+
+                        <div class="testimonial-box text-center p-5">
+
+                            <i class="bi bi-quote display-4 text-primary"></i>
+
+                            <p class="lead">
+
+                                "I ordered customized keychains for our
+                                school event and they turned out great.
+                                The design and printing quality exceeded
+                                my expectations."
+
+                            </p>
+
+                            <div class="stars mb-2">
+                                ★★★★★
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Myka G.
+                            </h5>
+
+                            <small class="text-muted">
+                                Customer
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CUSTOMER 3 -->
+
+                    <div class="carousel-item">
+
+                        <div class="testimonial-box text-center p-5">
+
+                            <i class="bi bi-quote display-4 text-primary"></i>
+
+                            <p class="lead">
+
+                                "Very convenient and easy to order.
+                                The stickers I received were exactly
+                                what I wanted. Highly recommended!"
+
+                            </p>
+
+                            <div class="stars mb-2">
+                                ★★★★★
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Nicole B.
+                            </h5>
+
+                            <small class="text-muted">
+                                Customer
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREVIOUS -->
+
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+
+                    <span class="visually-hidden">
+                        Previous
+                    </span>
+
+                </button>
+
+
+                <!-- NEXT -->
+
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+
+                    <span class="visually-hidden">
+                        Next
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="bg-light py-5">
+
+        <div class="container">
+
+
+            <div class="text-center mb-5">
+
+                <span class="badge bg-primary mb-2">
+                    Contact
+                </span>
+
+                <h2 class="fw-bold">
+                    Contact Us
+                </h2>
+
+                <p class="text-muted">
+
+                    Have a question or want to place an order?
+                    Send us a message today!
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-5">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="col-sm-12 col-md-5">
+
+                    <h3 class="fw-bold mb-4">
+                        Get In Touch
+                    </h3>
+
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-geo-alt-fill contact-icon me-3"></i>
+
+                        <div>
+
+                            <h5>Location</h5>
+
+                            <p class="text-muted">
+                                Prenza, Lian, Batangas
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-clock-fill contact-icon me-3"></i>
+
+                        <div>
+
+                            <h5>Business Hours</h5>
+
+                            <p class="text-muted">
+
+                                Monday - Saturday<br>
+                                9:00 AM - 8:00 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-printer-fill contact-icon me-3"></i>
+
+                        <div>
+
+                            <h5>Services</h5>
+
+                            <p class="text-muted">
+
+                                Printing, customization,
+                                laminating and personalized products.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT FORM -->
+
+                <div class="col-sm-12 col-md-7">
+
+                    <div class="card border-0 shadow-sm">
+
+                        <div class="card-body p-4">
+
+                            <h3 class="fw-bold mb-4">
+                                Send Us a Message
+                            </h3>
+
+
+                            <form id="contactForm">
+
+
+                                <!-- FULL NAME -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="fullname"
+                                        class="form-label">
+
+                                        Full Name
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="fullname"
+                                        name="fullname"
+                                        placeholder="Enter your full name"
+                                        required>
+
+                                </div>
+
+
+                                <!-- EMAIL -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="email"
+                                        class="form-label">
+
+                                        Email Address
+
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Enter your email address"
+                                        required>
+
+                                </div>
+
+
+                                <!-- SUBJECT -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="subject"
+                                        class="form-label">
+
+                                        Subject
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="subject"
+                                        name="subject"
+                                        placeholder="Enter subject"
+                                        required>
+
+                                </div>
+
+
+                                <!-- MESSAGE -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="message"
+                                        class="form-label">
+
+                                        Message
+
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="message"
+                                        name="message"
+                                        rows="5"
+                                        placeholder="Write your message here..."
+                                        required></textarea>
+
+                                </div>
+
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg w-100">
+
+                                    <i class="bi bi-send-fill"></i>
+                                    Send Message
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+ 
+    <footer class="bg-dark text-white py-4">
+
+        <div class="container text-center">
+
+            <h4 class="fw-bold">
+                CRAFTED BY WAV
+            </h4>
+
+            <p>
+                Turning Your Ideas Into Something You Can Hold.
+            </p>
+
+
+            <div class="mb-3">
+
+                <a href="#home" class="text-white me-3">
+                    Home
+                </a>
+
+                <a href="#features" class="text-white me-3">
+                    Features
+                </a>
+
+                <a href="#pricing" class="text-white me-3">
+                    Pricing
+                </a>
+
+                <a href="#testimonials" class="text-white me-3">
+                    Testimonials
+                </a>
+
+                <a href="#contact" class="text-white">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <p class="mb-0">
+
+                © 2026 CRAFTED BY WAV. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+  
+    <!-- LOCAL BOOTSTRAP JAVASCRIPT -->
+
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- CUSTOM JAVASCRIPT -->
+    <script>
+
+        /*  DARK / LIGHT MODE */
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+
+        themeToggle.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                themeToggle.innerHTML =
+                    '<i class="bi bi-sun-fill"></i> Light Mode';
+
+            } else {
+
+                themeToggle.innerHTML =
+                    '<i class="bi bi-moon-fill"></i> Dark Mode';
+
+            }
+
+        });
+
+
+        /*  PRICING BUTTONS */
+
+        const planButtons =
+            document.querySelectorAll(".plan-button");
+
+
+        planButtons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const selectedPlan =
+                    this.getAttribute("data-plan");
+
+
+                Swal.fire({
+
+                    title: selectedPlan + " Package",
+
+                    text:
+                        "You selected the " +
+                        selectedPlan +
+                        " package.",
+
+                    icon: "success",
+
+                    confirmButtonText: "Continue"
+
+                }).then(function () {
+
+                    document
+                        .getElementById("contact")
+                        .scrollIntoView({
+                            behavior: "smooth"
+                        });
+
+
+                    document.getElementById("subject").value =
+                        selectedPlan + " Package Inquiry";
+
+                });
+
+            });
+
+        });
+
+
+        /* CONTACT FORM */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+
+        contactForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const customerName =
+                    document.getElementById("fullname").value;
+
+
+                Swal.fire({
+
+                    title: "Message Sent!",
+
+                    text:
+                        "Thank you, " +
+                        customerName +
+                        "! Your message has been submitted.",
+
+                    icon: "success",
+
+                    confirmButtonText: "OK"
+
+                });
+
+
+                contactForm.reset();
+
+            }
+        );
+
+
+        /* SECURITY EVENT LISTENER */
+        document.addEventListener(
+            "contextmenu",
+            function (event) {
+
+                event.preventDefault();
+
+
+                Swal.fire({
+
+                    title: "Action Restricted",
+
+                    text:
+                        "Right-click is disabled on this webpage.",
+
+                    icon: "warning",
+
+                    confirmButtonText: "OK"
+
+                });
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
